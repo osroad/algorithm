@@ -1,0 +1,29 @@
+References:
+- "Programming interviews exposed"
+- LeetCode, CodeLab, Quora, and Stack Overflow
+
+Content:
+- Linkedlist
+	* singly linked list
+		+ function that can change the 1st element of a linked list must be passed a pointer to the head pointer
+  insert(element** head) rather than element*head
+		+ always test for the end of a linked list as you traverse it
+		+ deletion & insertion require a pointer to the element immediately preceding the deletion or insertion location
+		+ deletion/insertion of an element always requires at least 2 pointers besides the head pointer (the one to be deleted/inserted & the one to traverse)
+	* doubly linked list
+	* circular linked list
+	* cyclic linked list
+		+ use 2 pointers to advance at different speeds (slow: 1 step per move / fast: 2 nodes per move)
+
+	* find and fix bugs
+		+ check the data comes into the function properly
+		+ check each line of the function works correctly
+		+ check the data comes out of the function correctly
+		+ check the common error conditions
+	* in C all function parameters are passd by value & variables cannot be passed by reference. So pass a pointer to the variable you wish to change. If you want to change a pointer(*), pass pointer to pointer (**)
+
+
+- clarify the problem
+- start with the first solution that comes to mind
+- refine the solution
+- 
