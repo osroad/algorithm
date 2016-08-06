@@ -2,6 +2,24 @@ References:
 - "Programming interviews exposed"
 - LeetCode, CodeLab, Quora, and Stack Overflow
 
+
+
+/** Algorithm Analysis Table **/
+
+Notes:
+- Θ、Ο、ο、Ω、ω
+- n: number of nodes in the collection
+- h: height of tree
+
+=========================================================================
+            | Walk 	| Search 	| Min 	| Max 	| Insert 	| Delete 	| 
+------------|-------|-----------|-------|-------|-----------|-----------|
+linked list | Θ(n)	| Θ(n)		| Θ(n)	| Θ(h)	| Θ(n)		| Θ(n)		|
+------------|-------|-----------|-------|-------|-----------|-----------|
+tree 		| Θ(n)	| O(h)		| O(h)	| O(h)	| 
+=========================================================================
+
+
 Content:
 - Linkedlist
 	* singly linked list
@@ -21,7 +39,17 @@ Content:
 		+ check the data comes out of the function correctly
 		+ check the common error conditions
 	* in C all function parameters are passd by value & variables cannot be passed by reference. So pass a pointer to the variable you wish to change. If you want to change a pointer(*), pass pointer to pointer (**)
-
+- Tree
+	* binary search tree
+		+ each node contains left, right and parent;  x is a node in a BST, y is a node in left subtree; then y.key <= x.key; if y is a node in the right subtree of x; then y.key >= x.key
+		+ tree walk: preorder/inorder/postorder prints x.key first/in between/last. e.g, below is inorder walk
+			if (x) {
+				inorder-tree-walk(x.left)
+				print x.key
+				inorder-tree-walk(x.right)
+			}
+		+ tree-walk takes thd(n)
+		+ minmal/maximal node is the most left/right child
 
 - clarify the problem
 - start with the first solution that comes to mind
