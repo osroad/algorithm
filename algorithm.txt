@@ -11,13 +11,13 @@ Notes:
 - n: number of nodes in the collection
 - h: height of tree
 
-=========================================================================
-            | Walk 	| Search 	| Min 	| Max 	| Insert 	| Delete 	| 
-------------|-------|-----------|-------|-------|-----------|-----------|
-linked list | Θ(n)	| Θ(n)		| Θ(n)	| Θ(h)	| Θ(n)		| Θ(n)		|
-------------|-------|-----------|-------|-------|-----------|-----------|
-tree 		| Θ(n)	| O(h)		| O(h)	| O(h)	| 
-=========================================================================
+=========================================================================================================================
+            | Walk 	| Search 	| Find Min 	| Find Max 	| Find Predecessor 	| Find Successor 	| Insert 	| Delete 	| 
+------------|-------|-----------|-----------|-----------|-------------------|-------------------|-----------|-----------|
+linked list | Θ(n)	| Θ(n)		| Θ(n)		| Θ(h)		| Θ(1)				| Θ(1)				| Θ(1)		| O(1)		|
+------------|-------|-----------|-----------|-----------|-------------------|-------------------|-----------|-----------|
+tree 		| Θ(n)	| O(h)		| O(h)		| O(h)		| O(h)				| O(h)				| O(h) 		| O(h)		|
+=========================================================================================================================
 
 
 Content:
@@ -48,8 +48,8 @@ Content:
 				print x.key
 				inorder-tree-walk(x.right)
 			}
-		+ tree-walk takes thd(n)
 		+ minmal/maximal node is the most left/right child
+		+ insertion just put the new node as a new leaf(more complicated for insertion in a balanced BST)
 
 - clarify the problem
 - start with the first solution that comes to mind
